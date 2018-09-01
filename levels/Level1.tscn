@@ -1,11 +1,10 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://graphics/tileset.tres" type="TileSet" id=1]
-[ext_resource path="res://Portal.tscn" type="PackedScene" id=2]
-[ext_resource path="res://PlayerCharacter.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Portal.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/PlayerCharacter.tscn" type="PackedScene" id=3]
 
-
-[node name="World" type="Node2D"]
+[node name="World" type="Node2D" index="0"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -31,7 +30,7 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 
 position = Vector2( 112.936, 316.895 )
 
-[node name="KinematicBody2D" parent="." index="2" instance=ExtResource( 3 )]
+[node name="PlayerCharacter" parent="." index="2" instance=ExtResource( 3 )]
 
 position = Vector2( 814.052, 176.208 )
 

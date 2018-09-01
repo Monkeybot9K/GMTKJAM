@@ -20,7 +20,6 @@ _sections_unfolded = [ "Collision" ]
 __meta__ = {
 "_edit_group_": true
 }
-direction = Vector2( 0, 0 )
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 

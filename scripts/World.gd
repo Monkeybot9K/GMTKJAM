@@ -13,4 +13,8 @@ func _on_EnemyOwl_shoot(args):
 	
 func _process(delta):
 	for b in bullets:
-		print(b)
+		if !b.get_node("VisibilityNotifier2D").is_on_screen():
+			b.dead = true
+			remove_child(b)
+			
+	bullets.
