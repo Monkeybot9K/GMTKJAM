@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HeartIcon.png-486f59afdce898ccf9b654bf1d4560af.stex"
+path="res://.import/Character10.png-dcf9731566ff5f17e89e728833acbe0a.stex"
 
 [deps]
 
-source_file="res://graphics/HeartIcon.png"
-dest_files=[ "res://.import/HeartIcon.png-486f59afdce898ccf9b654bf1d4560af.stex" ]
+source_file="res://graphics/Character10.png"
+dest_files=[ "res://.import/Character10.png-dcf9731566ff5f17e89e728833acbe0a.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
