@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://graphics/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/PlayerCharacter.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/GUI.tscn" type="PackedScene" id=3]
 
 [node name="World" type="Node2D"]
 
@@ -28,8 +29,10 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="KinematicBody2D" parent="." index="1" instance=ExtResource( 2 )]
+[node name="PlayerCharacter" parent="." index="1" instance=ExtResource( 2 )]
 
 position = Vector2( 506.466, 268.306 )
+
+[node name="GUI" parent="." index="2" instance=ExtResource( 3 )]
 
 

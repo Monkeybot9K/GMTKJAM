@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 radius = 4.0
 
-[node name="EnemyBullet" type="KinematicBody2D" index="0"]
+[node name="EnemyBullet" type="KinematicBody2D"]
 
 position = Vector2( 544.564, 289.17 )
 input_pickable = false
