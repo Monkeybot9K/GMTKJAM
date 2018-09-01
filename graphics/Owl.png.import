@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tilemap.jpg-7fd55383e8188ae219ae9df471141068.stex"
+path="res://.import/Owl.png-afde9f7dc99fb658a5b2c2b1d15a210f.stex"
 
 [deps]
 
-source_file="res://graphics/tilemap.jpg"
-dest_files=[ "res://.import/tilemap.jpg-7fd55383e8188ae219ae9df471141068.stex" ]
+source_file="res://graphics/Owl.png"
+dest_files=[ "res://.import/Owl.png-afde9f7dc99fb658a5b2c2b1d15a210f.stex" ]
 
 [params]
 
