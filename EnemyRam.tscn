@@ -1,17 +1,17 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://EnemyRam.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://graphics/Ram.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 32, 32 )
+extents = Vector2( 16, 32 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 144, 32 )
+extents = Vector2( 128, 48 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" index="0"]
 
@@ -29,16 +29,18 @@ ramming_speed = 400
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
-modulate = Color( 1, 0, 0, 1 )
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Visibility" ]
+vframes = 2
+hframes = 2
+frame = 2
+_sections_unfolded = [ "Animation", "Offset", "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-visible = false
 shape = SubResource( 1 )
+_sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="Area2D" type="Area2D" parent="." index="2"]
+[node name="ViewArea" type="Area2D" parent="." index="2"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -49,12 +51,12 @@ audio_bus_override = false
 audio_bus_name = "Master"
 _sections_unfolded = [ "Audio Bus", "Collision", "Pickable", "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ViewArea" index="0"]
 
-position = Vector2( 176, 0 )
+position = Vector2( 144, 0 )
 shape = SubResource( 2 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="ViewArea" to="." method="_on_Area2D_body_entered"]
 
 
