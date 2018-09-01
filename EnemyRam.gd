@@ -38,6 +38,7 @@ func _physics_process(delta):
 	#If on downtime, count down
 	if downtime_timer > 0:
 		downtime_timer -= delta
+		return
 	else:
 		#If no longer in downtime, and no heading, start moving toward a random one
 		if motion.length() == 0:
@@ -72,6 +73,4 @@ func _physics_process(delta):
 		if isRamming:
 			downtime_timer = downtime_after_attack
 			isRamming = false
-			motion = Vector2()
-		else:
-			motion = random_motion()
+		motion = Vector2()
