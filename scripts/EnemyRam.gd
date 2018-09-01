@@ -6,7 +6,7 @@ export var downtime_after_attack = 5
 export var movement_speed = 50
 export var ramming_speed = 400
 
-var isActive = false
+var isActive = true
 var isRamming = false
 var motion = Vector2()
 var downtime_timer = 0
@@ -20,10 +20,7 @@ func _on_Area2D_body_entered(body):
 
 #Wander around in search of the player
 func random_motion():
-	randomize()
-	var x = floor(rand_range(-1,1))
-	var y = floor(rand_range(-1,1))
-	return Vector2(x,y).normalized() * movement_speed
+	return Vector2(rand_range(-1,1), rand_range(-1,1)).normalized() * movement_speed
 
 #Go straight toward the player's position
 func ramming_motion():
