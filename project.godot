@@ -11,19 +11,13 @@ config_version=3
 [application]
 
 config/name="GMTKJAM"
-run/main_scene="res://Level1.tscn"
+run/main_scene="res://scenes/Level0.tscn"
+boot_splash/fullsize=false
 config/icon="res://icon.png"
 
-[layer_names]
+[display]
 
 window/size/height=640
 window/handheld/emulate_touchscreen=true
 window/stretch/mode="2d"
 window/stretch/aspect="expand"
-2d_physics/layer_1="player"
-2d_physics/layer_2="enemy"
-2d_physics/layer_3="bullet"
-
-[rendering]
-
-environment/default_environment="res://default_env.tres"
