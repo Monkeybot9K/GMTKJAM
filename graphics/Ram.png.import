@@ -7,7 +7,10 @@ path="res://.import/Ram.png-b76ff1b3173cd22f0f0d9133d574ba14.stex"
 [deps]
 
 source_file="res://graphics/Ram.png"
+source_md5="d4adaebe4ccba8bfca6113305cc22698"
+
 dest_files=[ "res://.import/Ram.png-b76ff1b3173cd22f0f0d9133d574ba14.stex" ]
+dest_md5="379b26b89beb91ff4bac9c022f7fb2d6"
 
 [params]
 

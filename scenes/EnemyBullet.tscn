@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/EnemyBullet.gd" type="Script" id=1]
+[ext_resource path="res://graphics/OwlBullet.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 4.0
+
+[node name="EnemyBullet" type="KinematicBody2D" index="0"]
+
+position = Vector2( 544.564, 289.17 )
+input_pickable = false
+collision_layer = 4
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
+__meta__ = {
+"_edit_group_": true
+}
+direction = Vector2( 0, 0 )
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+shape = SubResource( 1 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="2"]
+
+rect = Rect2( -4, -4, 8, 8 )
+
+

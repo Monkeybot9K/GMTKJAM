@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://tileset.tres" type="TileSet" id=1]
-[ext_resource path="res://Portal.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Portal.tscn" type="PackedScene" id=2]
 [ext_resource path="res://EnemyRam.tscn" type="PackedScene" id=3]
-[ext_resource path="res://PlayerCharacter.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/PlayerCharacter.tscn" type="PackedScene" id=4]
 
 [node name="World" type="Node"]
 
@@ -38,13 +38,9 @@ target = "res://Level1.tscn"
 
 [node name="KinematicBody2D" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 67.2899, 65.4247 )
+position = Vector2( 218.458, 200.907 )
 
-[node name="KinematicBody2D2" parent="." index="3" instance=ExtResource( 3 )]
-
-position = Vector2( 72.177, 535.395 )
-
-[node name="PlayerCharacter" parent="." index="4" instance=ExtResource( 4 )]
+[node name="PlayerCharacter" parent="." index="3" instance=ExtResource( 4 )]
 
 position = Vector2( 496, 272 )
 

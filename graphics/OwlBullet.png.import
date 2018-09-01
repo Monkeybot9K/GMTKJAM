@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Owl.png-afde9f7dc99fb658a5b2c2b1d15a210f.stex"
+path="res://.import/OwlBullet.png-727444562a9530d0f1488fbaaf620767.stex"
 
 [deps]
 
-source_file="res://graphics/Owl.png"
-source_md5="f0a34e2c949441e0bb07afb25077ad69"
+source_file="res://graphics/OwlBullet.png"
+source_md5="3ef1baf765eb17f3aef737901d3caced"
 
-dest_files=[ "res://.import/Owl.png-afde9f7dc99fb658a5b2c2b1d15a210f.stex" ]
-dest_md5="0259cb09ed02b798ea9d0fc91a84f9cf"
+dest_files=[ "res://.import/OwlBullet.png-727444562a9530d0f1488fbaaf620767.stex" ]
+dest_md5="7942f10f44775b3403dae709ea241106"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
