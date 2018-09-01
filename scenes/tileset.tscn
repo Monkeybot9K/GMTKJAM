@@ -130,7 +130,6 @@ shape = SubResource( 4 )
 [node name="5" type="Sprite" parent="." index="5"]
 
 position = Vector2( 32, 192.088 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 192, 0, 64, 64 )
@@ -179,7 +178,6 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, -32, -32, -32, -32, 32, 0, 32 )
 
 position = Vector2( 192, 192.088 )
 rotation = 0.00274775
-scale = Vector2( 1, 1 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 192, 64, 64, 64 )

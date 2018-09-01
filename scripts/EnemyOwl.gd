@@ -11,8 +11,8 @@ func _on_Area2D_body_entered(body):
 func _on_Area2D_body_exited(body):
 	if $Area2D.get_overlapping_bodies().has(player_character):
 		isActive = false
-		shoot_timer = 0
 
+export var initial_position = 2
 export var side_change_timeout = 3
 export var shoot_cooldown = 5
 
@@ -36,6 +36,9 @@ func shoot():
 	shoot_timer = shoot_cooldown
 	
 func _ready():
+	current_side = initial_position
+	$Area2D.rotation_degrees = 90 * current_side
+	$Sprite.frame = current_side
 	side_change_timer = side_change_timeout
 
 func _process(delta):
@@ -49,4 +52,5 @@ func _process(delta):
 			side_change_timer -= delta
 		else:
 			idle_movement()
+			shoot_timer = 0
 

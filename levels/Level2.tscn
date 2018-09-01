@@ -1,11 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://graphics/tileset.tres" type="TileSet" id=1]
-[ext_resource path="res://scenes/Portal.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/EnemyRam.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/PlayerCharacter.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/PlayerCharacter.tscn" type="PackedScene" id=2]
 
-[node name="World" type="Node"]
+[node name="World" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -30,22 +28,8 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Portal" parent="." index="1" instance=ExtResource( 2 )]
+[node name="KinematicBody2D" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( 829.828, 273.435 )
-_sections_unfolded = [ "Pickable" ]
-target = "res://levels/Level1.tscn"
-
-[node name="KinematicBody2D" parent="." index="2" instance=ExtResource( 3 )]
-
-position = Vector2( 67.2899, 65.4247 )
-
-[node name="KinematicBody2D2" parent="." index="3" instance=ExtResource( 3 )]
-
-position = Vector2( 72.177, 535.395 )
-
-[node name="PlayerCharacter" parent="." index="4" instance=ExtResource( 4 )]
-
-position = Vector2( 496, 272 )
+position = Vector2( 506.466, 268.306 )
 
 

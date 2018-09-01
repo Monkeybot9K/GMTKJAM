@@ -14,7 +14,7 @@ func _on_EnemyOwl_shoot(args):
 func _process(delta):
 	var removeBullets = []
 	for b in bullets:
-		if !b.get_node("VisibilityNotifier2D").is_on_screen():
+		if b.isDead:
 			removeBullets.push_back(bullets.find(b))
 			remove_child(b)
 			
