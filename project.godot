@@ -11,8 +11,13 @@ config_version=3
 [application]
 
 config/name="GMTKJAM"
-run/main_scene="res://World.tscn"
+run/main_scene="res://Level0.tscn"
+boot_splash/fullsize=false
 config/icon="res://icon.png"
+
+[display]
+
+window/handheld/emulate_touchscreen=true
 
 [rendering]
 

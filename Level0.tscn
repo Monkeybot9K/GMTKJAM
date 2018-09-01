@@ -8,8 +8,10 @@
 [node name="Portal" parent="." index="0" instance=ExtResource( 1 )]
 
 position = Vector2( 829.828, 273.435 )
+_sections_unfolded = [ "Pickable" ]
+target = "res://Level1.tscn"
 
-[node name="PlayeCharacter" parent="." index="1" instance=ExtResource( 2 )]
+[node name="PlayerCharacter" parent="." index="1" instance=ExtResource( 2 )]
 
 position = Vector2( 496, 272 )
 

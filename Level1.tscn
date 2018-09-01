@@ -3,14 +3,14 @@
 [ext_resource path="res://Portal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://PlayerCharacter.tscn" type="PackedScene" id=2]
 
-[node name="World" type="Node" index="0"]
+[node name="World" type="Node2D"]
 
 [node name="Portal" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( 829.828, 273.435 )
+position = Vector2( 112.936, 316.895 )
 
-[node name="PlayeCharacter" parent="." index="1" instance=ExtResource( 2 )]
+[node name="KinematicBody2D" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( 496, 272 )
+position = Vector2( 814.052, 176.208 )
 
 
