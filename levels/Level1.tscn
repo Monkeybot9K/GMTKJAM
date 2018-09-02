@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scripts/BulletManager.gd" type="Script" id=1]
 [ext_resource path="res://graphics/tileset.tres" type="TileSet" id=2]
@@ -6,8 +6,9 @@
 [ext_resource path="res://scenes/EnemyOwl.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/PlayerCharacter.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/GUI.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Key.tscn" type="PackedScene" id=7]
 
-[node name="World" type="Node2D"]
+[node name="World" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -53,6 +54,10 @@ side_change_timeout = 3
 position = Vector2( 814.052, 176.208 )
 
 [node name="GUI" parent="." index="4" instance=ExtResource( 6 )]
+
+[node name="Key" parent="." index="5" instance=ExtResource( 7 )]
+
+position = Vector2( 299.183, 190.548 )
 
 [connection signal="shoot" from="EnemyOwl" to="." method="_on_EnemyOwl_shoot"]
 

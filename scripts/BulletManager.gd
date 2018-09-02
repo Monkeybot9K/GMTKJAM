@@ -2,8 +2,6 @@ extends Node2D
 
 onready var bullet = preload("res://scenes/EnemyBullet.tscn")
 
-onready var player_character = get_parent().get_node("PlayerCharacter")
-
 var lives = 3
 var bullets = []
 
@@ -17,6 +15,13 @@ func _on_EnemyOwl_shoot(args):
 	
 func update_lives(args):
 	GameState.HitCharacter(1, args[0])
+	
+func _ready():
+	if $Key != null:
+		$Key.connect("key_picked", self, "remove_key")
+		
+func remove_key():
+	remove_child($Key)
 	
 func _process(delta):
 	var removeBullets = []

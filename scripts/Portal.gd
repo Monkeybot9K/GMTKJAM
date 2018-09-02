@@ -5,7 +5,8 @@ export(String, FILE, "*.tscn") var target
 export var locked = false
 
 func _ready():
-	toggleLocked(locked)
+	GameState.connect("open_portal", self, "toggle_locked", [false])
+	toggle_locked(locked)
 
 func _physics_process(delta):
 	if target == null: return
@@ -13,7 +14,7 @@ func _physics_process(delta):
 		if body.name == "PlayerCharacter":
 			get_tree().change_scene(target)
 
-func toggleLocked(locked):
+func toggle_locked(locked):
 	#Toggle Portal accordingly
 	$CollisionShape2D.disabled = locked
 	$Sprite.frame = 0 if locked else 1

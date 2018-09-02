@@ -34,7 +34,7 @@ __meta__ = {
 [node name="Portal" parent="." index="1" instance=ExtResource( 2 )]
 
 position = Vector2( 848.244, 267.296 )
-_sections_unfolded = [ "Pickable" ]
+_sections_unfolded = [ "Audio Bus", "Collision", "Pickable" ]
 target = "res://levels/Level1.tscn"
 
 [node name="Ram1" parent="." index="2" instance=ExtResource( 3 )]
