@@ -15,8 +15,8 @@ func _on_EnemyOwl_shoot(args):
 	b.connect("bullet_impact", self, "update_lives")
 	add_child(b)
 	
-func update_lives():
-	GameState.HitCharacter(1)
+func update_lives(args):
+	GameState.HitCharacter(1, args[0])
 	
 func _process(delta):
 	var removeBullets = []

@@ -1,20 +1,23 @@
 extends KinematicBody2D
 
 var movement_speed = 200
+var damaged_impulse = 300
 var damaged_cooldown = .25
 
 var motion = Vector2()
 var currentAnimation = "Idle"
 var defending = false
 var damaged = false
+var damaged_dir = Vector2()
 var damaged_timer = 0
 
 func _ready():
 	GameState.connect("damage_taken", self, "handle_damage_taken")
 
-func handle_damage_taken():
+func handle_damage_taken(args):
 	$Sprite.modulate = Color(.85, 0, 0)
 	damaged_timer = damaged_cooldown
+	damaged_dir = args[0]
 	damaged = true
 	
 func _process(delta):
@@ -28,10 +31,14 @@ func _process(delta):
 func _physics_process(delta):
 	motion = Vector2()
 	currentAnimation = "Idle"
-	handle_input()
+	if damaged:
+		motion = damaged_dir * damaged_impulse
+	else:
+		handle_input()
 
-	$Shield.get_node("CollisionShape2D").disabled = !defending
+	$Shield/CollisionShape2D.disabled = !defending
 	$Sprite.play(currentAnimation)
+	
 	move_and_slide(motion)
 	
 #Defend or move according to user input

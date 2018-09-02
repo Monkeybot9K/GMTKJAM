@@ -125,4 +125,4 @@ func _on_Sprite_frame_changed():
 	if $Sprite.frame == 2:
 		for body in $AttackRange.get_overlapping_bodies():
 			if body.name == "PlayerCharacter":
-				GameState.HitCharacter(1)
+				GameState.HitCharacter(1, motion.normalized())

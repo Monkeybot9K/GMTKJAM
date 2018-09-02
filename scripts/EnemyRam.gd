@@ -69,6 +69,6 @@ func _physics_process(delta):
 		if isRamming:
 			downtime_timer = downtime_after_attack
 			isRamming = false
-		motion = Vector2()
 		if collision.collider.name == "PlayerCharacter":
-			GameState.HitCharacter(1)
+			GameState.HitCharacter(1, motion.normalized())
+		motion = Vector2()
