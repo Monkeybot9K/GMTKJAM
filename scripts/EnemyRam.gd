@@ -6,7 +6,7 @@ export var downtime_after_attack = 5
 export var movement_speed = 50
 export var ramming_speed = 400
 
-var isActive = true
+var isActive = false
 var isRamming = false
 var motion = Vector2()
 var downtime_timer = 0

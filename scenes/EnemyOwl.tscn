@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 32, 32 )
+extents = Vector2( 18, 16 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
@@ -18,18 +18,20 @@ extents = Vector2( 32, 96 )
 position = Vector2( 480.388, 353.904 )
 z_index = 1
 input_pickable = false
-collision_layer = 1
-collision_mask = 1
+collision_layer = 4
+collision_mask = 18
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Material", "Visibility", "Z Index" ]
+_sections_unfolded = [ "Collision", "Material", "Visibility", "Z Index" ]
 initial_position = 2
 side_change_timeout = 5
 shoot_cooldown = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
+position = Vector2( 0, 16 )
 shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 

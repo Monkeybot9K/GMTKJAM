@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scripts/BulletManager.gd" type="Script" id=1]
 [ext_resource path="res://graphics/tileset.tres" type="TileSet" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scenes/EnemyOwl.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/PlayerCharacter.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/GUI.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/EnemyOx.tscn" type="PackedScene" id=7]
 
 [node name="World" type="Node2D"]
 
@@ -42,20 +43,18 @@ target = "res://levels/Level2.tscn"
 [node name="EnemyOwl" parent="." index="2" instance=ExtResource( 4 )]
 
 position = Vector2( 513.537, 301.111 )
-collision_layer = 4
 collision_mask = 3
-_sections_unfolded = [ "Collision" ]
-initial_position = 2
 side_change_timeout = 3
 
 [node name="PlayerCharacter" parent="." index="3" instance=ExtResource( 5 )]
 
 position = Vector2( 814.052, 176.208 )
-collision_layer = 2
-collision_mask = 13
-_sections_unfolded = [ "Collision" ]
 
 [node name="GUI" parent="." index="4" instance=ExtResource( 6 )]
+
+[node name="KinematicBody2D" parent="." index="5" instance=ExtResource( 7 )]
+
+position = Vector2( 240, 160 )
 
 [connection signal="shoot" from="EnemyOwl" to="." method="_on_EnemyOwl_shoot"]
 
