@@ -209,9 +209,9 @@ points = PoolVector2Array( 0, 0, 32, -32, 32, 32, 0, 32 )
 9/texture = ExtResource( 1 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
-9/region = Rect2( 0, 0, 256, 192 )
+9/region = Rect2( 64, 128, 64, 64 )
 9/is_autotile = false
-9/occluder_offset = Vector2( 128, 96 )
-9/navigation_offset = Vector2( 128, 96 )
+9/occluder_offset = Vector2( 32, 32 )
+9/navigation_offset = Vector2( 32, 32 )
 9/shapes = [  ]
 
