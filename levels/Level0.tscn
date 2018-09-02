@@ -37,11 +37,11 @@ position = Vector2( 829.828, 273.435 )
 _sections_unfolded = [ "Pickable" ]
 target = "res://levels/Level1.tscn"
 
-[node name="KinematicBody2D" parent="." index="2" instance=ExtResource( 3 )]
+[node name="Ram1" parent="." index="2" instance=ExtResource( 3 )]
 
 position = Vector2( 67.2899, 65.4247 )
 
-[node name="KinematicBody2D2" parent="." index="3" instance=ExtResource( 3 )]
+[node name="Ram2" parent="." index="3" instance=ExtResource( 3 )]
 
 position = Vector2( 72.177, 535.395 )
 

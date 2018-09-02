@@ -66,8 +66,11 @@ func _physics_process(delta):
 			$ViewArea.rotation_degrees = 0
 
 	#Perform current motion and, if collision occurs stop motion, engage downtime
-	if move_and_collide(motion * delta) != null:
+	var collision = move_and_collide(motion * delta)
+	if collision != null:
 		if isRamming:
 			downtime_timer = downtime_after_attack
 			isRamming = false
 		motion = Vector2()
+		if collision.collider.name == "PlayerCharacter":
+			GameState.SetLives(GameState.Lives - 1)
