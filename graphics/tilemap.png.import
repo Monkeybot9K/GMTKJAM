@@ -7,10 +7,7 @@ path="res://.import/tilemap.png-61a5aa79e58b9a6ad2c79d78c106ce27.stex"
 [deps]
 
 source_file="res://graphics/tilemap.png"
-source_md5="150dae22ae0bf37a1f16f6d97c73ec80"
-
 dest_files=[ "res://.import/tilemap.png-61a5aa79e58b9a6ad2c79d78c106ce27.stex" ]
-dest_md5="7d1aaa77df18f17d9914181a10a63ef6"
 
 [params]
 
@@ -19,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
