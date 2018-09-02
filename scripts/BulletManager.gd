@@ -16,7 +16,7 @@ func _on_EnemyOwl_shoot(args):
 	add_child(b)
 	
 func update_lives():
-	GameState.SetLives(GameState.Lives - 1)
+	GameState.HitCharacter(1)
 	
 func _process(delta):
 	var removeBullets = []

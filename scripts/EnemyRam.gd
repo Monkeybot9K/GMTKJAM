@@ -71,4 +71,4 @@ func _physics_process(delta):
 			isRamming = false
 		motion = Vector2()
 		if collision.collider.name == "PlayerCharacter":
-			GameState.SetLives(GameState.Lives - 1)
+			GameState.HitCharacter(1)

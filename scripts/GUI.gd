@@ -7,5 +7,5 @@ func _ready():
 	
 func update():
 	print("update_gui")
-	$HBoxContainer/Number.text = str(GameState.Lives)
+	$HBoxContainer/Number.text = str(GameState.lives)
 	
