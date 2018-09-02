@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
+path="res://.import/tilemap.jpg-7fd55383e8188ae219ae9df471141068.stex"
 
 [deps]
 
-source_file="res://icon.png"
-source_md5="ae7e641067601e2184afcade49abd283"
+source_file="res://graphics/tilemap.jpg"
+source_md5="5d0e9cf20786d47f70ac711e9a38604b"
 
-dest_files=[ "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex" ]
-dest_md5="84511021bbc8c9d37c7f0f4d181de883"
+dest_files=[ "res://.import/tilemap.jpg-7fd55383e8188ae219ae9df471141068.stex" ]
+dest_md5="4212c373f7f06cfa09481b698a6b9465"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

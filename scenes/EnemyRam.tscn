@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scripts/EnemyRam.gd" type="Script" id=1]
+[ext_resource path="res://graphics/Ram.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 128, 48 )
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+
+input_pickable = false
+collision_layer = 4
+collision_mask = 23
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "collision" ]
+__meta__ = {
+"_edit_group_": true
+}
+downtime_after_attack = 5
+movement_speed = 50
+ramming_speed = 400
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 2
+frame = 2
+_sections_unfolded = [ "Animation", "Offset", "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( 0, 16 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="ViewArea" type="Area2D" parent="." index="2"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 0
+collision_mask = 2
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Audio Bus", "Collision", "Pickable", "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ViewArea" index="0"]
+
+position = Vector2( 144, 0 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+
+[connection signal="body_entered" from="ViewArea" to="." method="_on_Area2D_body_entered"]
+
+

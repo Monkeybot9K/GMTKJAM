@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Portal.tscn" type="PackedScene" id=1]
+[ext_resource path="res://PlayerCharacter.tscn" type="PackedScene" id=2]
+
+[node name="World" type="Node" index="0"]
+
+[node name="Portal" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 829.828, 273.435 )
+
+[node name="PlayeCharacter" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 496, 272 )
+
+
