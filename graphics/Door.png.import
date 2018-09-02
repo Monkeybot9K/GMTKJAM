@@ -7,7 +7,10 @@ path="res://.import/Door.png-878c6b49b27f7a2a473a60898cffab04.stex"
 [deps]
 
 source_file="res://graphics/Door.png"
+source_md5="f4585b4a1ea37410a987973ae1375a59"
+
 dest_files=[ "res://.import/Door.png-878c6b49b27f7a2a473a60898cffab04.stex" ]
+dest_md5="1844fa7c9a14165bcb023481f09e9c7a"
 
 [params]
 

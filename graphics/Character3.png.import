@@ -7,7 +7,10 @@ path="res://.import/Character3.png-9587b2ac0da564614a3743a529ff5708.stex"
 [deps]
 
 source_file="res://graphics/Character3.png"
+source_md5="5a774865c896556c0234d23476775137"
+
 dest_files=[ "res://.import/Character3.png-9587b2ac0da564614a3743a529ff5708.stex" ]
+dest_md5="afc8ac340cd3ec9466cc87c5d5a2fb76"
 
 [params]
 

@@ -7,7 +7,10 @@ path="res://.import/Ox17.png-9068dd42e0a03ef6b4cd60d18951140e.stex"
 [deps]
 
 source_file="res://graphics/Ox17.png"
+source_md5="d98294e69d6cd6e54d5348302bc561e1"
+
 dest_files=[ "res://.import/Ox17.png-9068dd42e0a03ef6b4cd60d18951140e.stex" ]
+dest_md5="63491a8c5c6c6dd69614ce077189a958"
 
 [params]
 

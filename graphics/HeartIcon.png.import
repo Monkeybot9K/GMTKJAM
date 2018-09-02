@@ -7,7 +7,10 @@ path="res://.import/HeartIcon.png-486f59afdce898ccf9b654bf1d4560af.stex"
 [deps]
 
 source_file="res://graphics/HeartIcon.png"
+source_md5="f1f857d8c8d25c1d9d01afa1f56232b6"
+
 dest_files=[ "res://.import/HeartIcon.png-486f59afdce898ccf9b654bf1d4560af.stex" ]
+dest_md5="f3113cdbbf8467e0bc779963c9bd9b93"
 
 [params]
 

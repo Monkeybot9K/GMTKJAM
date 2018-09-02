@@ -7,7 +7,10 @@ path="res://.import/OwlBullet.png-727444562a9530d0f1488fbaaf620767.stex"
 [deps]
 
 source_file="res://graphics/OwlBullet.png"
+source_md5="11d74b68838f4f84f71dfede52fb39e0"
+
 dest_files=[ "res://.import/OwlBullet.png-727444562a9530d0f1488fbaaf620767.stex" ]
+dest_md5="5739843cdf9ee3482f4054e27b60c542"
 
 [params]
 

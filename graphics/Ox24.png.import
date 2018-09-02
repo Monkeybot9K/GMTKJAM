@@ -7,7 +7,10 @@ path="res://.import/Ox24.png-7fb760e0b7412b5d01929d3073db4e0c.stex"
 [deps]
 
 source_file="res://graphics/Ox24.png"
+source_md5="f1e81f57e8030bd1953c1b15651f0098"
+
 dest_files=[ "res://.import/Ox24.png-7fb760e0b7412b5d01929d3073db4e0c.stex" ]
+dest_md5="09aaea1df357df0d72958d86a51cf018"
 
 [params]
 
