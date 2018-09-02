@@ -14,7 +14,7 @@ func _on_Area2D_body_exited(body):
 
 export var initial_position = 2
 export var side_change_timeout = 3
-export var shoot_cooldown = 5
+export var shoot_cooldown = 2
 
 const dirs = [Vector2(0,1), Vector2(-1,0), Vector2(0,-1), Vector2(1,0)]
 
@@ -26,7 +26,7 @@ signal shoot
 
 func idle_movement():
 	current_side += 1
-	if current_side > 3: current_side = 0
+	current_side %= 4
 	$Area2D.rotation_degrees = 90 * current_side
 	$Sprite.frame = current_side
 	side_change_timer = side_change_timeout

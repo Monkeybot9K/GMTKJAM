@@ -9,7 +9,7 @@ var bullets = []
 
 func _on_EnemyOwl_shoot(args):
 	var b = bullet.instance()
-	b.direction = args[0]
+	b.set_direction(args[0])
 	b.position = args[1]
 	bullets.push_back(b)
 	b.connect("bullet_impact", self, "update_lives")

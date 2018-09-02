@@ -16,13 +16,16 @@ extents = Vector2( 32, 96 )
 [node name="EnemyOwl" type="KinematicBody2D"]
 
 position = Vector2( 480.388, 353.904 )
+z_index = 1
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+_sections_unfolded = [ "Material", "Visibility", "Z Index" ]
+initial_position = 2
 side_change_timeout = 5
-shoot_cooldown = 5
+shoot_cooldown = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
@@ -33,7 +36,7 @@ shape = SubResource( 1 )
 texture = ExtResource( 2 )
 vframes = 2
 hframes = 2
-_sections_unfolded = [ "Animation" ]
+_sections_unfolded = [ "Animation", "Visibility" ]
 
 [node name="Area2D" type="Area2D" parent="." index="2"]
 

@@ -23,9 +23,10 @@ func _physics_process(delta):
 #Defend or move according to user input
 func handle_input():
 	if Input.is_action_pressed("Defend"):
-		currentAnimation = "Defend_Right"
 		if Input.is_action_pressed("ui_left"):
 			currentAnimation = "Defend_Left"
+		elif Input.is_action_pressed("ui_right"):
+			currentAnimation = "Defend_Right"
 		elif Input.is_action_pressed("ui_up"):
 			currentAnimation = "Defend_Up"
 		elif Input.is_action_pressed("ui_down"):
