@@ -13,10 +13,8 @@ var downtime_timer = 0
 
 #If player is spotted, Activate the enemy
 func _on_Area2D_body_entered(body):	
-	for body in $ViewArea.get_overlapping_bodies():
-		if body.name == "PlayerCharacter":
-			isActive = true
-
+	if body.name == "PlayerCharacter":
+		isActive = true
 
 #Wander around in search of the player
 func random_motion():
