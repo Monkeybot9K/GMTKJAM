@@ -29,9 +29,10 @@ locked = false
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
+scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
 hframes = 2
-_sections_unfolded = [ "Animation", "Visibility" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -39,6 +40,7 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
 position = Vector2( 0, 8 )
+scale = Vector2( 2, 2 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {

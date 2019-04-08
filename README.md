@@ -1,0 +1,2 @@
+ - Game originally develop for [Game Maker's Toolkit Jam](https://itch.io/jam/gmtk-jam) 
+ - Developed by Nicolás Viegas Palermo & Emiliano Carmona
