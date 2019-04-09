@@ -1,2 +1,3 @@
  - Game originally develop for [Game Maker's Toolkit Jam](https://itch.io/jam/gmtk-jam) 
  - Developed by Nicolás Viegas Palermo & Emiliano Carmona
+ - Font used is Sketch Gothic School by Galdino Otten [dafont profile](https://www.dafont.com/galdino-otten.d1859?text=epic) - [personal site](http://galdinootten.com/)

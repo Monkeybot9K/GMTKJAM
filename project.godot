@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="GMTKJAM"
-run/main_scene="res://levels/Level0.tscn"
+run/main_scene="res://levels/GameStart.tscn"
 boot_splash/fullsize=false
 config/icon="res://icon.png"
 
