@@ -40,11 +40,10 @@ position = Vector2( 506.466, 268.306 )
 [node name="KinematicBody2D" parent="." index="3" instance=ExtResource( 4 )]
 
 position = Vector2( 191.049, 270.041 )
-downtime_after_attack = 1.0
 
 [node name="Portal" parent="." index="4" instance=ExtResource( 5 )]
 
 position = Vector2( 843.017, 275.439 )
-target = "res://levels/Level3.tscn"
+target = "res://levels/GameWon.tscn"
 
 

@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/PlayerCharacter.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Key.tscn" type="PackedScene" id=3]
 
-[node name="World" type="Node2D" index="0"]
+[node name="World" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
