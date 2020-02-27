@@ -3,20 +3,21 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/Ox17.png-9068dd42e0a03ef6b4cd60d18951140e.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://graphics/Ox17.png"
-source_md5="d98294e69d6cd6e54d5348302bc561e1"
-
 dest_files=[ "res://.import/Ox17.png-9068dd42e0a03ef6b4cd60d18951140e.stex" ]
-dest_md5="63491a8c5c6c6dd69614ce077189a958"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=false
@@ -26,6 +27,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

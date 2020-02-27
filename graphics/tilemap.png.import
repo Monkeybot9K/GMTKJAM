@@ -3,20 +3,21 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/tilemap.png-61a5aa79e58b9a6ad2c79d78c106ce27.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://graphics/tilemap.png"
-source_md5="b8f3614d6c7084012dba62beffae3091"
-
 dest_files=[ "res://.import/tilemap.png-61a5aa79e58b9a6ad2c79d78c106ce27.stex" ]
-dest_md5="0c4b88182b38d2e7ffa9997a8fd64ee4"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=false
@@ -26,6 +27,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

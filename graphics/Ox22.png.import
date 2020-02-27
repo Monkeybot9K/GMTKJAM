@@ -3,20 +3,21 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/Ox22.png-95f12d8d98267f0eda58e3d2a2e860c8.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://graphics/Ox22.png"
-source_md5="c89804991ca70de6f8e2b15c81804d63"
-
 dest_files=[ "res://.import/Ox22.png-95f12d8d98267f0eda58e3d2a2e860c8.stex" ]
-dest_md5="a0135203802f93016e5afea07ad6c1b9"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=false
@@ -26,6 +27,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

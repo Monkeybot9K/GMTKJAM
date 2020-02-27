@@ -3,20 +3,21 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/Owl.png-afde9f7dc99fb658a5b2c2b1d15a210f.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://graphics/Owl.png"
-source_md5="f0a34e2c949441e0bb07afb25077ad69"
-
 dest_files=[ "res://.import/Owl.png-afde9f7dc99fb658a5b2c2b1d15a210f.stex" ]
-dest_md5="0259cb09ed02b798ea9d0fc91a84f9cf"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=false
@@ -26,6 +27,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

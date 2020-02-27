@@ -3,20 +3,21 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/Ox8.png-3cbb8964a0431b53ee0782ade4e91925.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://graphics/Ox8.png"
-source_md5="0a5209446d9f02541f6b5b7262056044"
-
 dest_files=[ "res://.import/Ox8.png-3cbb8964a0431b53ee0782ade4e91925.stex" ]
-dest_md5="3436440633e5802cc2e5c8a17be42a2b"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=false
@@ -26,6 +27,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true
