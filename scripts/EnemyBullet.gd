@@ -24,6 +24,6 @@ func _physics_process(delta):
 	if collision == null: return
 	
 	if collision.collider.name == "PlayerCharacter":
-		emit_signal("bullet_impact")
+		emit_signal("bullet_impact", [direction])
 		
 	isDead = true

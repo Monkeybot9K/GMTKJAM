@@ -1,15 +1,12 @@
 extends KinematicBody2D
 
-onready var player_character = get_parent().get_node("PlayerCharacter")
-
 var isActive = false
 #If player is spotted, Activate the enemy
 func _on_Area2D_body_entered(body):    
-    for body in $Area2D.get_overlapping_bodies():
-        isActive = body.name == "PlayerCharacter"
+	isActive = body.name == "PlayerCharacter"
 
 func _on_Area2D_body_exited(body):
-	if $Area2D.get_overlapping_bodies().has(player_character):
+	if body.name == "PlayerCharacter":
 		isActive = false
 
 export var initial_position = 2

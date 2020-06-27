@@ -1,41 +1,41 @@
 [gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://scripts/EnemyOx.gd" type="Script" id=1]
-[ext_resource path="res://graphics/Ox2.png" type="Texture" id=2]
-[ext_resource path="res://graphics/Ox14.png" type="Texture" id=3]
+[ext_resource path="res://graphics/Ox14.png" type="Texture" id=2]
+[ext_resource path="res://graphics/Ox2.png" type="Texture" id=3]
 [ext_resource path="res://graphics/Ox3.png" type="Texture" id=4]
 [ext_resource path="res://graphics/Ox15.png" type="Texture" id=5]
 [ext_resource path="res://graphics/Ox16.png" type="Texture" id=6]
 [ext_resource path="res://graphics/Ox17.png" type="Texture" id=7]
 [ext_resource path="res://graphics/Ox18.png" type="Texture" id=8]
 [ext_resource path="res://graphics/Ox19.png" type="Texture" id=9]
-[ext_resource path="res://graphics/Ox1.png" type="Texture" id=10]
-[ext_resource path="res://graphics/Ox5.png" type="Texture" id=11]
-[ext_resource path="res://graphics/Ox6.png" type="Texture" id=12]
-[ext_resource path="res://graphics/Ox7.png" type="Texture" id=13]
-[ext_resource path="res://graphics/Ox8.png" type="Texture" id=14]
-[ext_resource path="res://graphics/Ox9.png" type="Texture" id=15]
-[ext_resource path="res://graphics/Ox20.png" type="Texture" id=16]
-[ext_resource path="res://graphics/Ox21.png" type="Texture" id=17]
-[ext_resource path="res://graphics/Ox22.png" type="Texture" id=18]
-[ext_resource path="res://graphics/Ox23.png" type="Texture" id=19]
-[ext_resource path="res://graphics/Ox24.png" type="Texture" id=20]
-[ext_resource path="res://graphics/Ox10.png" type="Texture" id=21]
-[ext_resource path="res://graphics/Ox11.png" type="Texture" id=22]
-[ext_resource path="res://graphics/Ox12.png" type="Texture" id=23]
-[ext_resource path="res://graphics/Ox13.png" type="Texture" id=24]
+[ext_resource path="res://graphics/Ox10.png" type="Texture" id=10]
+[ext_resource path="res://graphics/Ox11.png" type="Texture" id=11]
+[ext_resource path="res://graphics/Ox12.png" type="Texture" id=12]
+[ext_resource path="res://graphics/Ox13.png" type="Texture" id=13]
+[ext_resource path="res://graphics/Ox5.png" type="Texture" id=14]
+[ext_resource path="res://graphics/Ox6.png" type="Texture" id=15]
+[ext_resource path="res://graphics/Ox7.png" type="Texture" id=16]
+[ext_resource path="res://graphics/Ox8.png" type="Texture" id=17]
+[ext_resource path="res://graphics/Ox9.png" type="Texture" id=18]
+[ext_resource path="res://graphics/Ox1.png" type="Texture" id=19]
+[ext_resource path="res://graphics/Ox20.png" type="Texture" id=20]
+[ext_resource path="res://graphics/Ox21.png" type="Texture" id=21]
+[ext_resource path="res://graphics/Ox22.png" type="Texture" id=22]
+[ext_resource path="res://graphics/Ox23.png" type="Texture" id=23]
+[ext_resource path="res://graphics/Ox24.png" type="Texture" id=24]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
-"name": "Right",
+"name": "Left",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "Left",
+"name": "Right",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
@@ -48,24 +48,24 @@ animations = [ {
 "name": "Axe_Up",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 10 ) ],
-"loop": true,
-"name": "Down",
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 2 ) ],
+"loop": false,
+"name": "Axe_Left",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
 "loop": false,
 "name": "Axe_Right",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
-"loop": false,
-"name": "Axe_Down",
+"frames": [ ExtResource( 19 ) ],
+"loop": true,
+"name": "Down",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ) ],
 "loop": false,
-"name": "Axe_Left",
+"name": "Axe_Down",
 "speed": 5.0
 } ]
 _sections_unfolded = [ "Resource" ]
@@ -78,14 +78,14 @@ extents = Vector2( 16, 16 )
 [sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
-extents = Vector2( 128, 48 )
+extents = Vector2( 155, 48 )
 
 [sub_resource type="CircleShape2D" id=4]
 
 custom_solver_bias = 0.0
 radius = 32.0
 
-[node name="KinematicBody2D" type="KinematicBody2D" index="0"]
+[node name="KinematicBody2D" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 4
@@ -93,14 +93,16 @@ collision_mask = 23
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision" ]
-downtime_after_attack = 0.5
+downtime_after_attack = 1.0
 movement_speed = 50
 attack_speed = 180
 
 [node name="Sprite" type="AnimatedSprite" parent="." index="0"]
 
+scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "Right"
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
@@ -123,7 +125,7 @@ _sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ViewArea" index="0"]
 
-position = Vector2( 144, 0 )
+position = Vector2( 198, 4 )
 shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
@@ -134,8 +136,9 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+monitorable = false
 collision_layer = 0
-collision_mask = 2
+collision_mask = 18
 audio_bus_override = false
 audio_bus_name = "Master"
 _sections_unfolded = [ "Collision" ]
@@ -143,10 +146,13 @@ _sections_unfolded = [ "Collision" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange" index="0"]
 
 position = Vector2( 0, 16 )
+scale = Vector2( 2, 2 )
 shape = SubResource( 4 )
 _sections_unfolded = [ "Transform" ]
 
 [connection signal="animation_finished" from="Sprite" to="." method="_on_Sprite_animation_finished"]
+
+[connection signal="frame_changed" from="Sprite" to="." method="_on_Sprite_frame_changed"]
 
 [connection signal="body_entered" from="ViewArea" to="." method="_on_ViewArea_body_entered"]
 

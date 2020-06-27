@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 onready var player_character = get_parent().get_node("PlayerCharacter")
 
-export var downtime_after_attack = 0.5
+export var downtime_after_attack = 1.0
 export var movement_speed = 50
 export var attack_speed = 180
 
@@ -17,23 +17,21 @@ var animations = ["Up","Down","Left","Right","Axe_Up","Axe_Down","Axe_Left","Axe
 
 #If player is spotted, Activate the enemy
 func _on_ViewArea_body_entered(body):
-	for body in $ViewArea.get_overlapping_bodies():
-		if body.name == "PlayerCharacter":
-			isActive = true
+	if body.name == "PlayerCharacter":
+		isActive = true
 
 #If player is lost, go back to chasing
 func _on_ViewArea_body_exited(body):
-	for body in $ViewArea.get_overlapping_bodies():
-		if body.name == "PlayerCharacter":
-			#If attacking, stop
-			isAttacking = false
-			if current_animation_index > 4:
-				current_animation_index -= 4
-			motion = chase_motion()
+	if body.name == "PlayerCharacter":
+		#If attacking, stop
+		isAttacking = false
+		if current_animation_index > 4:
+			current_animation_index -= 4
+		motion = chase_motion()
 
 #If player is in range and in view, attack
 func _on_AttackRange_body_entered(body):
-	if !isAttacking:
+	if !isAttacking || body.name != "PlayerCharacter":
 		return
 
 	motion = Vector2()
@@ -64,6 +62,7 @@ func _on_Sprite_animation_finished():
 		downtime_timer = downtime_after_attack
 		current_animation_index -= 4
 		isAttacking = false
+		motion = (player_character.position - position).normalized() * -1 * movement_speed
 
 #Walk toward player
 func chase_motion():
@@ -119,5 +118,11 @@ func _physics_process(delta):
 
 	$Sprite.play(animations[current_animation_index]) 
 	#Perform current motion and, if collision occurs stop motion, engage downtime
-	if move_and_collide(motion * delta) != null:
-		motion = Vector2()
+	var collision = move_and_collide(motion * delta)
+
+
+func _on_Sprite_frame_changed():
+	if $Sprite.frame == 2:
+		for body in $AttackRange.get_overlapping_bodies():
+			if body.name == "PlayerCharacter":
+				GameState.HitCharacter(1, motion.normalized())

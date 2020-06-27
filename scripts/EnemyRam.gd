@@ -13,10 +13,8 @@ var downtime_timer = 0
 
 #If player is spotted, Activate the enemy
 func _on_Area2D_body_entered(body):	
-	for body in $ViewArea.get_overlapping_bodies():
-		if body.name == "PlayerCharacter":
-			isActive = true
-
+	if body.name == "PlayerCharacter":
+		isActive = true
 
 #Wander around in search of the player
 func random_motion():
@@ -66,8 +64,11 @@ func _physics_process(delta):
 			$ViewArea.rotation_degrees = 0
 
 	#Perform current motion and, if collision occurs stop motion, engage downtime
-	if move_and_collide(motion * delta) != null:
+	var collision = move_and_collide(motion * delta)
+	if collision != null:
 		if isRamming:
 			downtime_timer = downtime_after_attack
 			isRamming = false
+		if collision.collider.name == "PlayerCharacter":
+			GameState.HitCharacter(1, motion.normalized())
 		motion = Vector2()
